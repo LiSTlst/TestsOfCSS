@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pagination</title>
+</head>
+<style type="text/css">
+	ul.pagination{
+		margin:0;
+		padding:0;
+		list-style-type:none;
+	}
+	ul.pagination li{
+		float:left;
+		margin-right:0.6em;
+	}
+	ul.pagination a,ul.pagination li.selected{
+		display:block;
+		padding:0.2em 0.5em;
+		border:1px solid #ccc;
+		text-decoration:none;
+	}
+	ul.pagination a:hover,ul.pagination a:focus,ul.pagination li.selected{
+		background-color:blue;
+		color:#fff;
+	}
+	ul.pagination a[rel="prev"]:before{
+		content: "\00ab";
+		padding-right:0.5em;
+	}
+	ul.pagination a[rel="next"]:after{
+		content:"\00bb";
+		padding-left:0.5em;
+	}
+</style>
+<body>
+	<div>
+		<ul class="pagination">
+			<li><a href="search.htm?page=1" rel="prev">Prev</a></li>
+			<li><a href="search.htm?page=1">1</a></li>
+			<li><a href="search.htm?page=2">2</a></li>
+			<li class="selected">3</li>
+			<li><a href="search.htm?page=4">4</a></li>
+			<li><a href="search.htm?page=5">5</a></li>
+			<li><a href="search.htm?page=3" rel="next">Next</a></li>
+		</ul>
+	</div>
+</body>
+</html>

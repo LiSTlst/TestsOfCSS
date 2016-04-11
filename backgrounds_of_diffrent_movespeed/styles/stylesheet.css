@@ -1,0 +1,30 @@
+
+/*由于背景一共有三层，每一层的背景相对于页面的偏移程度不同，
+ *在页面的宽度发生变化的时候，背景随着页面移动的速度也不同
+ *于是在页面中显示三层背景在交错的移动，如果设置的偏移量恰
+ *当的话就能让人感觉到一种透视感，为了能产生真实感，应该让
+ *最上一层的背景偏移速度最快，逐层减慢，最上一层的偏移量应
+ *设置为最大*/
+body{
+	background-image:url(../images/bg-rear.gif);
+	background-repeat:repeat-x;
+	background-color:#d3ff99;
+	background-position:20% 0;
+	margin:0px;
+}
+.midground{
+	background-image:url(../images/bg-mid.png);
+	background-repeat:repeat-x;
+	background-color:transparent;
+	background-position:40% 0;
+}
+.foreground{
+	background-image:url(../images/bg-front.png);
+	background-repeat:repeat-x;
+	background-color:transparent;
+	background-position:150% 0;
+}
+p{
+	margin:0px;
+	padding:80px;
+}

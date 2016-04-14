@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>one fieldset</title>
+	<style type="text/css">
+		fieldset{
+			margin:1em 0;
+			padding:1em;
+			border:1px solid #ccc;
+			background:#f8f8f8;
+			display: inline-block;
+		}
+		legend{
+			font-weight: bold;
+		}
+		label{
+			display:block;
+			cursor:pointer;
+		}
+		input[type="text"]{
+			width:20em;
+		}
+		textarea{
+			width: 100%;
+			height: 20em;
+		}
+		#remember-me .radio{
+			margin-right: 1em;
+		}
+		input[type="text"],textarea{
+			border-top:2px solid #999;
+			border-left: 2px solid #999;
+			border-bottom:1px solid #ccc;
+			border-right:1px solid #ccc; 
+		}
+		input[type="text"]:focus,textarea:focus{
+			background: #ffc;
+		}
+		label .required{
+			font-szie:0.75em;
+			color:#760000;
+		}
+		label{
+			float:left;
+			width: 10em;
+			margin-bottom:1em;
+		}
+		form div{
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Your Contact Details</legend>
+			<div>
+				<label for="author">Name:<em class="required">(Required)</em></label>
+				<input name="author" id="author" type="text"></input>
+			</div>
+			<div>
+				<label for="address">Adress:</label>
+				<input name="address" id="address" type="text"></input>
+			</div>
+			<div>
+				<label for="url">Web address:<em class="required">(Required)</em></label>
+				<input name="email" id="email" type="text"></input>
+			</div>
+			<div>
+				<label for="introduction">introduction for yourself:<em class="required">(Rquired)</em></label>
+				<textarea name="introduction" if="introduction"></textarea>
+			</div>
+		</fieldset>
+		<fieldset id="remenber-me">
+			<legend>Remember Me</legend>
+			<div>
+				<label for="remember-yes">
+					<input type="radio" class="radio" name="remember" id="remember-yes" value="yes"></input>
+					Yes
+				</label>
+				<label for="female">
+					<input type="radio" class="radio" name="remember" id="remember-no" value="no">
+					</input>	
+					No
+				</label>
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>

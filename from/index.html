@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#dayofbirthlabel,#yearofbirthlabel{
+			text-indent:-1000em;
+			float:left;
+			width: 0;
+		}
+		input#dayofbirth{
+			width: 3em;
+			margin-right: 0.5em;
+		}
+		select#monthofbitrh{
+			width: 10em;
+			margin-right: 0.5em;
+		}
+		input#yearofbirth{
+			width: 5em;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<div>
+				<label id="dayofbirthlabel" for="dateofbirth">Date Of Birth:</label>
+				<input name="dasteofbirth" id="dateofbirth" type="text"></input>
+
+				<label id="monthofbirthLabel" for="monthofbirth"></label>
+				<select name="monthofbirth" id="monthofbirth">
+					<option value="1">January</option>
+					<option value="2">February</option>
+					<option valur="3">March</option>
+				</select>
+				<label id="yearofbirthlabel" for="yearofbirth">Year Of Birth:</label>
+				<input name="yearofbirth" id="yearofbirth" type="text"></input>
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+.remote{
+	width: 333px;
+	height: 500px;
+	position:relative;
+}
+.remote ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+.remote a .hotspot{
+	width: 50px;
+	height: 60px;
+	position:absolute;
+}
+.remote .rich a .hotspot{
+	top: 50px;
+	left: 80px;
+}
+.remote .sophie a .hotspot{
+	top:90px;
+	left:200px;
+}
+.remote .cath a .hotspot{
+	top:140px;
+	left:55px;
+	width: 60px;
+	height:80px;
+}
+.remote .james a .hotspot{
+	top:140px;
+	left:145px;
+}
+.remote .paul a .hotspot{
+	top:165px;
+	left:245px;
+	width: 60px;
+	height: 80px;
+}
+.remote a .link{
+	position:absolute;
+	display: block;
+	width: 10em;
+	right: -11em;
+	cursor:pointer;
+}
+.remote .rich a .link{
+	top:0;
+}
+.remote .sophie a .link{
+	top:1.2em;
+}
+.remote .cath a .link{
+	top:2.4em;
+}
+.remote .james a .link{
+	top:3.6em;
+}
+.remote .paul a .link{
+	top:4.8em;
+}
+.remote a:hover .hotspot,.remote a:focus .hotspot{
+	border:1px solid #fff;
+}
+.remote a:hover .link,.remote a:focus .link{
+	color:#0066ff;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is a complex fieldset</title>
+	<link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Personal Information</legend>
+			<div class="place">
+				<label for="place_of_birth" class="inline_header">Place of Birth:</label>
+				<select id="place_of_birth" name="place_of_birth">
+					<option>USA</option>
+					<option>China</option>
+					<option>England</option>
+					<option>France</option>
+				</select>
+			</div>
+			<div class="time">
+				<div>
+					<label for="day_of_birth" class="inline_header1">Date of Birth:</label>
+					<input type="text" id="day_of_birth" name="day_of_birth"></input>
+				</div>
+				<div>
+					<label for="month_of_birth" class="inline_header">Month of Birth:</label>
+					<select id="month_of_birth" name="month_of_birth">
+						<option>Mar</option>
+						<option>Sept</option>
+						<option>june</option>
+					</select>
+				</div>
+				<div>
+					<label for="year_of_birth" class="inline_header">Year of Birth:</label>
+					<input type="text" id="year_of_birth" name="year_of_birth"></input>
+				</div>
+			</div>
+			<div class="colorlike">
+				<h3>Favorite Color:</h3>
+				<div class="col">
+					<label for="red">
+						<input type="checkbox" id="red" name="color"></input>
+						red
+					</label>
+					<label for="yellow">
+						<input type="checkbox" id="yellow" name="color"></input>
+						yellow
+					</label>
+					<label for="pink">
+						<input type="checkbox" id="pink" name="color"></input>
+						pink
+					</label>
+					<label for="green">
+						<input type="checkbox" id="green" name="color"></input>
+						green
+					</label>
+				</div>
+				<div class="col">
+					<label for="orange">
+						<input type="checkbox" id="orange"name="color"></input>
+						orange
+					</label>
+					<label for="purple">
+						<input type="checkbox" id="purple" name="color"></input>
+						purple
+					</label>
+					<label for="blue">
+						<input type="checkbox" id="blue" name="color"></input>
+						blue
+					</label>
+					<label for="other">
+						<input type="checkbox" id="other" name="color"></input>
+						other
+					</label>					
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>

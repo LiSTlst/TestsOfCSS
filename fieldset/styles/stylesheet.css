@@ -1,0 +1,55 @@
+form,fieldset,div,h3{
+	margin:0;
+	padding:0;
+}
+fieldset{
+	background-color: #eee;
+	padding:1em;
+}
+fieldset>div{
+	margin-bottom:1em;
+}
+form{
+	display:inline-block;
+}
+fieldset legend{
+	font-size:1.2em;
+	font-weight: bold;
+}
+div.time{
+	overflow:hidden;
+}
+div.time div{
+	float:left;
+	margin-right: 1em
+}
+div.place{
+
+}
+input[type="text"]{
+	width: 4em;
+}
+div.time label,div.place label,div h3{
+	float: left;
+	width: 10em;
+	font-weight: bold;
+	font-size: 1em;
+}
+div.time label.inline_header1{
+	clear:both;
+	width: 10em;
+}
+div.time label.inline_header{
+	float:left;
+	text-indent: -1000em;
+	width: 0;
+}
+div.col{
+	float: left;
+	width: 5em;
+	margin-right:1em;
+}
+div.col label{
+	padding-right:1em;
+	width: 5em;
+}

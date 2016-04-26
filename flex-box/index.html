@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex boxes</title>
+	<style type="text/css">
+		body{
+			font-family: "黑体";
+		}
+		div[class*=flex-container]{
+			display:flex;				
+			border:1px solid #9e9e9e;
+			margin-bottom:20px;
+			background-color: #ffeb3b; 
+		}
+		div.flex-item{
+			height: 60px;
+			width: 60px;
+			margin:4px;
+			box-shadow:#eee 2px 2px 1px; 
+			background-color: white;
+		}
+		div.point{
+			border-radius:100%;
+			height: 50px;
+			width: 50px;
+			background-color: #ffc107;
+			font-size: 40px;
+			color:white;
+			font-weight: bold;
+			margin:5px auto;
+			text-align: center;
+		}
+		div[class*=one]{
+			flex-direction:row;
+		}
+		div[class*=two]{
+			flex-direction:column;
+		}
+		div[class*=three]{
+			flex-direction:row-reverse;
+		}
+		div[class*=four]{
+			flex-direction:column-reverse;
+		}
+		div[class*=five]{
+			width: 250px;
+			flex-direction:row;
+			flex-wrap:nowrap;
+		}
+		div[class*=six]{
+			width: 250px;
+			flex-direction:row;
+			flex-wrap:wrap;
+		}
+		div[class*=seven]{
+			width: 250px;
+			flex-direction:row;
+			flex-wrap:wrap-reverse;
+			/*flex-flow:row wrap-reverse*/
+		}
+		div[class*=eight]{
+			justify-content:flex-start;
+		}
+		div[class*=nine]{
+			justify-content:flex-end;
+		}
+		div[class*=ten]{
+			justify-content:center;
+		}
+		div[class*=eleven]{
+			justify-content:space-between;
+		}
+		div[class*=twelve]{
+			justify-content:space-around;
+		}
+	</style>
+</head>
+<body>
+	<div class="flex-container-one">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+	<div class="flex-container-two">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+	<div class="flex-container-three">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+	<div class="flex-container-four">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+	<div class="flex-container-five">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+	<div class="flex-container-six">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+	<div class="flex-container-seven">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+	<div class="flex-container-eight">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+	<div class="flex-container-nine">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+	<div class="flex-container-ten">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+	<div class="flex-container-eleven">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+	<div class="flex-container-twelve">
+		<div class="flex-item">
+			<div class="point">1</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">2</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">3</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">4</div>
+		</div>
+		<div class="flex-item">
+			<div class="point">5</div>
+		</div>
+	</div>
+</body>
+</html>

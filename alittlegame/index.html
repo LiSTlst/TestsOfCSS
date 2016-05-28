@@ -16,29 +16,32 @@
 	</style>
 </head>
 <body>
-	<canvas id="myCanvas" width="600" height="320"></canvas>
+	<canvas id="myCanvas" height="600" width="960"></canvas>
 	<script type="text/javascript">
 		var canvas = document.getElementById("myCanvas");
 		var ctx = canvas.getContext("2d");
 		var ballRadius = 10;
 		var x = canvas.width/2;
 		var y = canvas.height-30;
-		var dx = 2;
-		var dy = -2;
+		var dx = 3;
+		var dy = -8;
 		var paddleHeight = 10;
-		var paddleWidth = 75;
+		var paddleWidth = 120;
 		var paddleX = (canvas.width-paddleWidth)/2;
 		var rightPressed = false;
 		var leftPressed = false;
-		var brickRowCount = 5;
-		var brickColumnCount = 3;
-		var brickWidth = 75;
-		var brickHeight = 20;
-		var brickPadding = 10;
+		var brickRowCount = 12;
+		var brickColumnCount = 6;
+		var brickWidth = 80;
+		var brickHeight = 30;
+		var brickPadding = 0;
 		var brickOffsetTop = 30;
-		var brickOffsetLeft = 30;
+		var brickOffsetLeft = 0;
 		var score = 0;
 		var lives = 3;
+		var	preX=0;
+		var curX=0;
+		var mouseDirection;
 
 		var bricks = [];
 		for(c=0; c<brickColumnCount; c++) {
@@ -69,10 +72,13 @@
 		    }
 		}
 		function mouseMoveHandler(e) {
+			preX=curX;
 		    var relativeX = e.clientX - canvas.offsetLeft;
+		    curX=e.clientX;
 		    if(relativeX > 0 && relativeX < canvas.width) {
 		        paddleX = relativeX - paddleWidth/2;
 		    }
+		    mouseDirection=curX-preX;
 		}
 		function collisionDetection() {
 		    for(c=0; c<brickColumnCount; c++) {
@@ -118,7 +124,9 @@
 		                ctx.beginPath();
 		                ctx.rect(brickX, brickY, brickWidth, brickHeight);
 		                ctx.fillStyle = "#0095DD";
+		                ctx.strokeStyle = "#0055dd";
 		                ctx.fill();
+		                ctx.stroke();
 		                ctx.closePath();
 		            }
 		        }
@@ -150,8 +158,15 @@
 		    if(y + dy < ballRadius) {
 		        dy = -dy;
 		    }
-		    else if(y + dy > canvas.height-ballRadius) {
+		    else if(y + dy > canvas.height-ballRadius-paddleHeight/2) {
 		        if(x > paddleX && x < paddleX + paddleWidth) {
+		        	if(mouseDirection>30){
+		        		dx += 1;
+		        		dy += 0.5;
+		        	}else if(mouseDirection<-30){
+		        		dx -= 1;
+		        		dy +=0.5;		        		
+		        	}
 		            dy = -dy;
 		        }
 		        else {
@@ -161,10 +176,10 @@
 		                document.location.reload();
 		            }
 		            else {
+		            	dx = 3;
+		            	dy = -3;
 		                x = canvas.width/2;
 		                y = canvas.height-30;
-		                dx = 3;
-		                dy = -3;
 		                paddleX = (canvas.width-paddleWidth)/2;
 		            }
 		        }

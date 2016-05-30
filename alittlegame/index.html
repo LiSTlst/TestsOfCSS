@@ -30,13 +30,13 @@
 		var paddleX = (canvas.width-paddleWidth)/2;
 		var rightPressed = false;
 		var leftPressed = false;
-		var brickRowCount = 12;
+		var brickRowCount = 10;
 		var brickColumnCount = 6;
 		var brickWidth = 80;
 		var brickHeight = 30;
 		var brickPadding = 0;
 		var brickOffsetTop = 30;
-		var brickOffsetLeft = 0;
+		var brickOffsetLeft = 80;
 		var score = 0;
 		var lives = 3;
 		var	preX=0;
@@ -177,7 +177,7 @@
 		            }
 		            else {
 		            	dx = 3;
-		            	dy = -3;
+		            	dy = -8;
 		                x = canvas.width/2;
 		                y = canvas.height-30;
 		                paddleX = (canvas.width-paddleWidth)/2;

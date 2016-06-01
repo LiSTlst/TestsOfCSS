@@ -158,8 +158,8 @@
 		    if(y + dy < ballRadius) {
 		        dy = -dy;
 		    }
-		    else if(y + dy > canvas.height-ballRadius-paddleHeight/2) {
-		        if(x > paddleX && x < paddleX + paddleWidth) {
+		    else if(y + dy > canvas.height-ballRadius) {
+		        if(x + dx > paddleX && x + dx < paddleX + paddleWidth) {
 		        	if(mouseDirection>30){
 		        		dx += 1;
 		        		dy += 0.5;
